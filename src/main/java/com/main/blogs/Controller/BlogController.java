@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/blogs")
+@RequestMapping("/api/v1/blogs")
 public class BlogController {
     private final BlogServices blogServices;
 
