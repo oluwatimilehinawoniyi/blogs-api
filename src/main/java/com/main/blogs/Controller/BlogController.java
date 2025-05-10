@@ -1,7 +1,6 @@
 package com.main.blogs.Controller;
 
 import com.main.blogs.DTO.BlogDTO;
-import com.main.blogs.model.Blog;
 import com.main.blogs.service.BlogServices;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
