@@ -3,11 +3,14 @@ package com.main.blogs.service;
 import com.main.blogs.DTO.BlogDTO;
 import com.main.blogs.model.Blog;
 import com.main.blogs.repository.BlogRepository;
+import com.main.blogs.utils.BlogMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
+
+import static com.main.blogs.utils.BlogMapper.mapToDto;
 
 @Service
 public class BlogServices {
@@ -31,10 +34,14 @@ public class BlogServices {
 
     public List<BlogDTO> getBlogs() {
         List<Blog> blogs = blogRepository.findAll();
-        return blogs.stream().map(this::mapToDto).toList();
+        return blogs.stream().map(BlogMapper::mapToDto).toList();
     }
 
-    public BlogDTO getBlogById(UUID blogId) {
+    public Blog getBlogById(UUID blogId) {
+        return blogRepository.findById(blogId).orElseThrow();
+    }
+
+    public BlogDTO getBlogDtoById(UUID blogId) {
         Blog blog = blogRepository.findById(blogId).orElseThrow();
         return mapToDto(blog);
     }
@@ -50,15 +57,5 @@ public class BlogServices {
 
     public void delete(UUID blogId) {
         blogRepository.deleteById(blogId);
-    }
-
-    private BlogDTO mapToDto(Blog blog) {
-        BlogDTO dto = new BlogDTO();
-        dto.setId(blog.getId().toString());
-        dto.setTitle(blog.getTitle());
-        dto.setContent(blog.getContent());
-        dto.setCreatedAt(blog.getCreatedAt());
-        dto.setUpdatedAt(blog.getUpdatedAt());
-        return dto;
     }
 }

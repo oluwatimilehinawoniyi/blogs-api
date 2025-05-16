@@ -28,7 +28,7 @@ public class BlogController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public BlogDTO getBlog(@Valid @PathVariable UUID id) {
-        return blogServices.getBlogById(id);
+        return blogServices.getBlogDtoById(id);
     }
 
     @PostMapping

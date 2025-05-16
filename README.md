@@ -36,7 +36,8 @@ Java/Spring Boot. I’m focusing on:
 
 - [ ] Implement pagination and sorting
 - [ ] Implement Comment feature
-    - [ ] Only authorized users can create/update/delete comments
+  - [x] CRUD feature
+  - [ ] Only authorized users can create/update/delete comments
 - [ ] Implement User feature
 - [ ] Implement Authentication/Authorization using Spring Security
 - [ ] Implement Tag feature (filter/search blogs by tag)

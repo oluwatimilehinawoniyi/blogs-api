@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -27,4 +29,8 @@ public class Blog {
 
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private Set<Comment> comments = new HashSet<>();
 }
