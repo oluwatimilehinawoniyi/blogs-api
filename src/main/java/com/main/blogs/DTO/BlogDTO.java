@@ -40,5 +40,5 @@ public class BlogDTO {
 
     @Null(groups = CreateBlogDTO.class)
     @NotNull(groups = GetBlogDTO.class)
-    private Set<Comment> comments;
+    private Set<CommentDTO> comments;
 }

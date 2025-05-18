@@ -68,7 +68,7 @@ git clone https://github.com/oluwatimilehinawoniyi/blogs-api
 cd blogs-api
 ```
 
-### 2. Setup Your Database
+### 2. Set up Your Database
 
 Ensure PostgreSQL is installed and running on your machine.
 

@@ -13,6 +13,8 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(exclude = "comments")
+@ToString(exclude = "comments")
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

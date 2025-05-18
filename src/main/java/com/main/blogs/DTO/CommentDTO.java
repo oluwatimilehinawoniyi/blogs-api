@@ -6,17 +6,32 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-@NotNull
-@NotBlank
 public class CommentDTO {
-    public interface CreateCommentDTO{}
-    public interface GetCommentDTO{}
-    public interface UpdateCommentDTO{}
-    public interface DeleteCommentDTO{}
+    public interface CreateCommentDTO {
+    }
 
+    public interface GetCommentDTO {
+    }
+
+    public interface UpdateCommentDTO {
+    }
+
+    public interface DeleteCommentDTO {
+    }
+
+    @Null(groups = {CreateCommentDTO.class})
+    @NotNull(groups = GetCommentDTO.class)
     private Long id;
+
+    @NotBlank(groups = {CreateCommentDTO.class, UpdateCommentDTO.class})
+    @Size(min = 5, max = 200)
     private String comment;
-    private String blogId;
+
+    @Null(groups = CreateCommentDTO.class)
+    @NotNull(groups = {GetCommentDTO.class, UpdateCommentDTO.class})
     private LocalDateTime createdAt;
+
+    @Null(groups = CreateCommentDTO.class)
+    @NotNull(groups = {GetCommentDTO.class, UpdateCommentDTO.class})
     private LocalDateTime updatedAt;
 }

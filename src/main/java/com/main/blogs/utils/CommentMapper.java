@@ -9,7 +9,6 @@ public class CommentMapper {
 
         dto.setId(comment.getId());
         dto.setComment(comment.getComment());
-        dto.setBlogId(comment.getBlog().getId().toString());
         dto.setCreatedAt(comment.getCreatedAt());
         dto.setUpdatedAt(comment.getUpdatedAt());
 

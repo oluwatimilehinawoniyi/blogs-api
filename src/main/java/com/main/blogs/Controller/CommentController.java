@@ -2,6 +2,7 @@ package com.main.blogs.Controller;
 
 import com.main.blogs.DTO.CommentDTO;
 import com.main.blogs.service.CommentServices;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class CommentController {
 
     @PostMapping("/{blogId}/comments")
     public void createComment(@PathVariable UUID blogId,
+                              @Validated(CommentDTO.CreateCommentDTO.class)
                               @RequestBody CommentDTO comment) {
         commentServices.addComment(blogId, comment);
     }

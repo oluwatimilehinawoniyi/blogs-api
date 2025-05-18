@@ -7,6 +7,7 @@ import com.main.blogs.utils.BlogMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,6 +29,7 @@ public class BlogServices {
         blog.setContent(newBlog.getContent());
         blog.setCreatedAt(LocalDateTime.now());
         blog.setUpdatedAt(LocalDateTime.now());
+        blog.setComments(new HashSet<>());
         blogRepository.save(blog);
         return mapToDto(blog);
     }
