@@ -1,6 +1,6 @@
-package com.main.blogs.DTO;
+package com.main.blogs.blog.DTO;
 
-import com.main.blogs.model.Comment;
+import com.main.blogs.comment.DTO.CommentDTO;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
@@ -13,9 +13,14 @@ import java.util.Set;
 @Data
 public class BlogDTO {
 
-    public interface CreateBlogDTO{}
-    public interface GetBlogDTO{}
-    public interface UpdateBlogDTO{}
+    public interface CreateBlogDTO {
+    }
+
+    public interface GetBlogDTO {
+    }
+
+    public interface UpdateBlogDTO {
+    }
 
     @NotBlank
     @Null(groups = {CreateBlogDTO.class, UpdateBlogDTO.class})
@@ -23,11 +28,13 @@ public class BlogDTO {
     private String id;
 
     @NotBlank(groups = {CreateBlogDTO.class, GetBlogDTO.class})
-    @Size(min = 5, max = 200)
+    @Size(min = 5, max = 200,
+            groups = {CreateBlogDTO.class, GetBlogDTO.class})
     private String title;
 
     @NotBlank(groups = {CreateBlogDTO.class, GetBlogDTO.class})
-    @Size(min = 10, max = 1000)
+    @Size(min = 10, max = 1000,
+            groups = {CreateBlogDTO.class, GetBlogDTO.class})
     private String content;
 
     @Null(groups = CreateBlogDTO.class)

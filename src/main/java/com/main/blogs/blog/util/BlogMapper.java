@@ -1,11 +1,11 @@
-package com.main.blogs.utils;
+package com.main.blogs.blog.util;
 
-import com.main.blogs.DTO.BlogDTO;
-import com.main.blogs.DTO.CommentDTO;
-import com.main.blogs.model.Blog;
-import com.main.blogs.model.Comment;
+import com.main.blogs.blog.DTO.BlogDTO;
+import com.main.blogs.comment.DTO.CommentDTO;
+import com.main.blogs.blog.model.Blog;
+import com.main.blogs.comment.model.Comment;
+import com.main.blogs.comment.utils.CommentMapper;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;

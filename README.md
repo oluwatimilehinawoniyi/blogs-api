@@ -41,8 +41,8 @@ Java/Spring Boot. I’m focusing on:
 - [ ] Implement User feature
 - [ ] Implement Authentication/Authorization using Spring Security
 - [ ] Implement Tag feature (filter/search blogs by tag)
-- [ ] Proper REST error handling
-- [ ] Global exception handling
+- [x] Proper REST error handling
+- [X] Global exception handling
 - [ ] Add Swagger/OpenAPI documentation
 - [ ] Unit and integration tests
 

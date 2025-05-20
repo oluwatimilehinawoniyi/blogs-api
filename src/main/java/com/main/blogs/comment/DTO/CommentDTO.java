@@ -1,4 +1,4 @@
-package com.main.blogs.DTO;
+package com.main.blogs.comment.DTO;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;

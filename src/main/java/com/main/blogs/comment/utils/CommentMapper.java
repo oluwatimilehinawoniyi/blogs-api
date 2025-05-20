@@ -1,7 +1,7 @@
-package com.main.blogs.utils;
+package com.main.blogs.comment.utils;
 
-import com.main.blogs.DTO.CommentDTO;
-import com.main.blogs.model.Comment;
+import com.main.blogs.comment.DTO.CommentDTO;
+import com.main.blogs.comment.model.Comment;
 
 public class CommentMapper {
     public static CommentDTO mapToDto(Comment comment) {

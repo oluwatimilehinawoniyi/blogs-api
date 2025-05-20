@@ -1,5 +1,6 @@
-package com.main.blogs.model;
+package com.main.blogs.blog.model;
 
+import com.main.blogs.comment.model.Comment;
 import jakarta.persistence.*;
 import lombok.*;
 
