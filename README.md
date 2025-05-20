@@ -4,8 +4,7 @@ This is a simple Blog API built with **Spring Boot** to practice and learn
 backend fundamentals such as REST APIs, service-layer design, DTOs, and
 Spring Data JPA.
 
-It's still under active development and currently includes only the **Blog
-** feature. More features like **Users**, **Comments**, and **Tags** will
+It's still under active development and currently includes only the **Blog** feature. More features like **Users**, **Comments**, and **Tags** will
 be added incrementally.
 
 ---
